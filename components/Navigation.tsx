@@ -2,16 +2,18 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Terminal, Zap, Target, Shield, Building, MessageSquare } from 'lucide-react'
+import { Terminal, Zap, Target, Shield, Building, MessageSquare, TrendingUp, Settings } from 'lucide-react'
 import WarpLogo from './WarpLogo'
 
 const navItems = [
   { href: '/', label: 'Overview', icon: Terminal },
+  { href: '/plg', label: 'PLG', icon: TrendingUp },
+  { href: '/plg-tooling', label: 'PLG Tooling', icon: Settings },
+  { href: '/enterprise-strategy', label: 'Enterprise Strategy', icon: Building },
   { href: '/competitive-analysis', label: 'Competitive Analysis', icon: Target },
   { href: '/elevator-pitches', label: 'Elevator Pitches', icon: MessageSquare },
   { href: '/technical-differentiators', label: 'Technical Differentiators', icon: Zap },
   { href: '/battle-cards', label: 'Battle Cards', icon: Shield },
-  { href: '/enterprise-strategy', label: 'Enterprise Strategy', icon: Building },
 ]
 
 export default function Navigation() {

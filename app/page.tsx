@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Target, MessageSquare, Zap, Shield, Building, TrendingUp } from 'lucide-react'
+import { ArrowRight, Target, MessageSquare, Zap, Shield, Building, TrendingUp, Settings } from 'lucide-react'
 
 // Updated with Warp branding
 export default function Home() {
@@ -16,6 +16,48 @@ export default function Home() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <Link href="/plg" className="group">
+          <div className="bg-warp-bg-primary border border-warp-border rounded-lg p-6 hover:bg-warp-bg-secondary transition-all duration-200 shadow-sm">
+            <TrendingUp className="h-12 w-12 text-warp-accent mb-4" />
+            <h3 className="text-xl font-semibold text-warp-text-primary mb-2">Product-Led Growth</h3>
+            <p className="text-warp-text-secondary mb-4">
+              Multi-channel outreach strategy with SDR cadences, Product Hunt campaigns, and community engagement tactics.
+            </p>
+            <div className="flex items-center text-warp-accent group-hover:text-warp-text-primary">
+              <span className="text-sm font-medium">Grow Users</span>
+              <ArrowRight className="h-4 w-4 ml-2" />
+            </div>
+          </div>
+        </Link>
+
+        <Link href="/plg-tooling" className="group">
+          <div className="bg-warp-bg-primary border border-warp-border rounded-lg p-6 hover:bg-warp-bg-secondary transition-all duration-200 shadow-sm">
+            <Settings className="h-12 w-12 text-warp-accent mb-4" />
+            <h3 className="text-xl font-semibold text-warp-text-primary mb-2">PLG Tooling</h3>
+            <p className="text-warp-text-secondary mb-4">
+              Complete technology stack implementation guide including HubSpot, Outreach, analytics, and sales intelligence tools.
+            </p>
+            <div className="flex items-center text-warp-accent group-hover:text-warp-text-primary">
+              <span className="text-sm font-medium">Build Stack</span>
+              <ArrowRight className="h-4 w-4 ml-2" />
+            </div>
+          </div>
+        </Link>
+
+        <Link href="/enterprise-strategy" className="group">
+          <div className="bg-warp-bg-primary border border-warp-border rounded-lg p-6 hover:bg-warp-bg-secondary transition-all duration-200 shadow-sm">
+            <Building className="h-12 w-12 text-warp-accent mb-4" />
+            <h3 className="text-xl font-semibold text-warp-text-primary mb-2">Enterprise Strategy</h3>
+            <p className="text-warp-text-secondary mb-4">
+              ROI models, discovery questions, and sales processes tailored for enterprise prospects.
+            </p>
+            <div className="flex items-center text-warp-accent group-hover:text-warp-text-primary">
+              <span className="text-sm font-medium">Scale Up</span>
+              <ArrowRight className="h-4 w-4 ml-2" />
+            </div>
+          </div>
+        </Link>
+
         <Link href="/competitive-analysis" className="group">
           <div className="bg-warp-bg-primary border border-warp-border rounded-lg p-6 hover:bg-warp-bg-secondary transition-all duration-200 shadow-sm">
             <Target className="h-12 w-12 text-warp-accent mb-4" />
@@ -67,20 +109,6 @@ export default function Home() {
             </p>
             <div className="flex items-center text-warp-accent group-hover:text-warp-text-primary">
               <span className="text-sm font-medium">Arm Yourself</span>
-              <ArrowRight className="h-4 w-4 ml-2" />
-            </div>
-          </div>
-        </Link>
-
-        <Link href="/enterprise-strategy" className="group">
-          <div className="bg-warp-bg-primary border border-warp-border rounded-lg p-6 hover:bg-warp-bg-secondary transition-all duration-200 shadow-sm">
-            <Building className="h-12 w-12 text-warp-accent mb-4" />
-            <h3 className="text-xl font-semibold text-warp-text-primary mb-2">Enterprise Strategy</h3>
-            <p className="text-warp-text-secondary mb-4">
-              ROI models, discovery questions, and sales processes tailored for enterprise prospects.
-            </p>
-            <div className="flex items-center text-warp-accent group-hover:text-warp-text-primary">
-              <span className="text-sm font-medium">Scale Up</span>
               <ArrowRight className="h-4 w-4 ml-2" />
             </div>
           </div>
