@@ -1,0 +1,5 @@
+# Ignore files for Vercel deployment
+.git
+.gitignore
+README.md
+node_modules
