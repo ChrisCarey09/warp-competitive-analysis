@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Terminal, Zap, Target, Shield, Building, MessageSquare } from 'lucide-react'
+import WarpLogo from './WarpLogo'
 
 const navItems = [
   { href: '/', label: 'Overview', icon: Terminal },
@@ -17,14 +18,15 @@ export default function Navigation() {
   const pathname = usePathname()
 
   return (
-    <nav className="bg-white shadow-sm border-b">
-      <div className="container mx-auto px-4">
+    <nav className="bg-warp-black border-b border-warp-bg-tertiary backdrop-blur-md">
+      <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center space-x-2">
-            <Terminal className="h-8 w-8 text-warp-blue" />
-            <span className="text-xl font-bold text-gray-900">Warp 2.0 Sales Intelligence</span>
+          <div className="flex items-center space-x-3">
+            <WarpLogo className="h-6 w-auto text-warp-off-white" />
+            <div className="h-6 w-px bg-warp-bg-tertiary" />
+            <span className="text-lg font-medium text-warp-text-primary">Sales Intelligence</span>
           </div>
-          <div className="flex space-x-1">
+          <div className="hidden md:flex space-x-1">
             {navItems.map((item) => {
               const Icon = item.icon
               const isActive = pathname === item.href
@@ -32,14 +34,14 @@ export default function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium flex items-center space-x-2 transition-colors ${
+                  className={`px-3 py-2 rounded-lg text-sm font-medium flex items-center space-x-2 transition-all duration-200 ${
                     isActive
-                      ? 'bg-warp-blue text-white'
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                      ? 'bg-warp-off-white text-warp-black'
+                      : 'text-warp-text-secondary hover:text-warp-text-primary hover:bg-warp-bg-tertiary'
                   }`}
                 >
                   <Icon className="h-4 w-4" />
-                  <span>{item.label}</span>
+                  <span className="hidden lg:block">{item.label}</span>
                 </Link>
               )
             })}

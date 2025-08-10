@@ -1,12 +1,9 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
 import Navigation from '../components/Navigation'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export const metadata = {
-  title: 'Warp 2.0 Competitive Analysis',
-  description: 'Sales intelligence and competitive positioning for Warp 2.0',
+  title: 'Warp Competitive Analysis',
+  description: 'Sales intelligence and competitive positioning for Warp 2.0 - The AI-powered terminal',
 }
 
 export default function RootLayout({
@@ -16,10 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="min-h-screen bg-gray-50">
+      <body>
+        <div className="min-h-screen bg-warp-black">
           <Navigation />
-          <main className="container mx-auto px-4 py-8">
+          <main className="container mx-auto px-4 py-8 max-w-6xl">
             {children}
           </main>
         </div>
