@@ -86,10 +86,10 @@ export default function Home() {
           </div>
         </Link>
 
-        <div className="bg-gradient-to-br from-warp-accent to-indigo-600 rounded-lg p-6 text-white">
-          <TrendingUp className="h-12 w-12 mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Key Insights</h3>
-          <ul className="text-sm space-y-2">
+        <div className="bg-warp-accent bg-opacity-10 border-2 border-warp-accent rounded-lg p-6">
+          <TrendingUp className="h-12 w-12 mb-4 text-warp-accent" />
+          <h3 className="text-xl font-semibold mb-2 text-warp-accent">Key Insights</h3>
+          <ul className="text-sm space-y-2 text-warp-text-primary">
             <li>• Execution capability is the #1 differentiator</li>
             <li>• Target the 60% of dev time outside the editor</li>
             <li>• Position as workflow completion, not just assistance</li>

@@ -95,15 +95,15 @@ export default function TechnicalDifferentiators() {
   return (
     <div className="max-w-6xl mx-auto">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Technical Differentiators</h1>
-        <p className="text-lg text-gray-600">
+        <h1 className="text-3xl font-bold text-warp-text-primary mb-4">Technical Differentiators</h1>
+        <p className="text-lg text-warp-text-secondary">
           The architectural capabilities that enable Warp to ship software end-to-end
         </p>
       </div>
 
-      <div className="bg-gradient-to-r from-warp-blue to-warp-purple rounded-lg p-6 text-white mb-8">
-        <h2 className="text-xl font-bold mb-2">The Fundamental Difference</h2>
-        <p className="text-sm">
+      <div className="bg-warp-accent bg-opacity-10 border-2 border-warp-accent rounded-lg p-6 mb-8">
+        <h2 className="text-xl font-bold mb-2 text-warp-accent">The Fundamental Difference</h2>
+        <p className="text-sm text-warp-text-primary">
           Warp has direct access to your development environment - your file system, terminal, 
           and all the tools in your development toolchain. This architectural advantage allows 
           us to execute entire workflows, not just suggest them.
@@ -114,19 +114,19 @@ export default function TechnicalDifferentiators() {
         {differentiators.map((diff, index) => {
           const Icon = diff.icon
           return (
-            <div key={index} className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+            <div key={index} className="bg-warp-bg-primary rounded-lg p-6 shadow-md border border-warp-border">
               <div className="flex items-center mb-4">
                 <div className={`p-3 rounded-lg ${diff.bgColor}`}>
                   <Icon className={`h-6 w-6 ${diff.color}`} />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 ml-3">{diff.title}</h3>
+                <h3 className="text-lg font-bold text-warp-text-primary ml-3">{diff.title}</h3>
               </div>
               
               <div className="mb-4">
-                <h4 className="font-semibold text-gray-900 mb-2">What Warp Can Do:</h4>
+                <h4 className="font-semibold text-warp-text-primary mb-2">What Warp Can Do:</h4>
                 <ul className="space-y-1">
                   {diff.capabilities.map((capability, capIndex) => (
-                    <li key={capIndex} className="text-sm text-gray-600 flex items-start">
+                    <li key={capIndex} className="text-sm text-warp-text-secondary flex items-start">
                       <span className="text-green-600 mr-2">✓</span>
                       {capability}
                     </li>
@@ -143,27 +143,27 @@ export default function TechnicalDifferentiators() {
         })}
       </div>
 
-      <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Real Workflow Comparison</h2>
-        <p className="text-gray-600 mb-6">
+      <div className="bg-warp-bg-primary rounded-lg p-6 shadow-md border border-warp-border mb-8">
+        <h2 className="text-xl font-bold text-warp-text-primary mb-4">Real Workflow Comparison</h2>
+        <p className="text-warp-text-secondary mb-6">
           Here's how a typical deployment workflow differs between Warp and competitors:
         </p>
         
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-gray-50">
+            <thead className="bg-warp-bg-secondary">
               <tr>
-                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Step</th>
-                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action Required</th>
-                <th className="px-4 py-3 text-center text-xs font-medium text-warp-blue uppercase tracking-wider bg-blue-50">Warp 2.0</th>
-                <th className="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Cursor/Claude</th>
+                <th className="px-4 py-3 text-left text-xs font-medium text-warp-text-tertiary uppercase tracking-wider">Step</th>
+                <th className="px-4 py-3 text-left text-xs font-medium text-warp-text-tertiary uppercase tracking-wider">Action Required</th>
+                <th className="px-4 py-3 text-center text-xs font-medium text-warp-accent uppercase tracking-wider bg-blue-50">Warp 2.0</th>
+                <th className="px-4 py-3 text-center text-xs font-medium text-warp-text-tertiary uppercase tracking-wider">Cursor/Claude</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-200">
+            <tbody className="divide-y divide-warp-border">
               {workflowExample.map((item, index) => (
-                <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                  <td className="px-4 py-3 text-sm font-medium text-gray-900">{item.step}</td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{item.action}</td>
+                <tr key={index} className={index % 2 === 0 ? 'bg-warp-bg-primary' : 'bg-warp-bg-secondary'}>
+                  <td className="px-4 py-3 text-sm font-medium text-warp-text-primary">{item.step}</td>
+                  <td className="px-4 py-3 text-sm text-warp-text-secondary">{item.action}</td>
                   <td className="px-4 py-3 text-sm text-center bg-green-50">
                     <span className="text-green-700">✓ {item.warp}</span>
                   </td>
@@ -177,17 +177,17 @@ export default function TechnicalDifferentiators() {
         </div>
 
         <div className="mt-6 bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-lg">
-          <h3 className="font-bold text-gray-900 mb-2">Result</h3>
+          <h3 className="font-bold text-warp-text-primary mb-2">Result</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <h4 className="font-semibold text-warp-blue">Warp 2.0</h4>
-              <p className="text-sm text-gray-600">
+              <h4 className="font-semibold text-warp-accent">Warp 2.0</h4>
+              <p className="text-sm text-warp-text-secondary">
                 One conversation, complete deployment, automated verification
               </p>
             </div>
             <div>
               <h4 className="font-semibold text-orange-600">Cursor/Claude</h4>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-warp-text-secondary">
                 7 manual steps, context switching, potential for human error
               </p>
             </div>
@@ -195,38 +195,38 @@ export default function TechnicalDifferentiators() {
         </div>
       </div>
 
-      <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Why This Matters for Software Shipping</h2>
+      <div className="bg-warp-bg-primary rounded-lg p-6 shadow-md border border-warp-border">
+        <h2 className="text-xl font-bold text-warp-text-primary mb-4">Why This Matters for Software Shipping</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Software Delivery Pipeline</h3>
+            <h3 className="font-semibold text-warp-text-primary mb-3">Software Delivery Pipeline</h3>
             <div className="space-y-2 text-sm">
               <div className="flex items-center">
-                <span className="w-16 text-gray-500">Build:</span>
+                <span className="w-16 text-warp-text-tertiary">Build:</span>
                 <span className="text-green-600">✓ Warp executes</span>
               </div>
               <div className="flex items-center">
-                <span className="w-16 text-gray-500">Test:</span>
+                <span className="w-16 text-warp-text-tertiary">Test:</span>
                 <span className="text-green-600">✓ Warp executes</span>
               </div>
               <div className="flex items-center">
-                <span className="w-16 text-gray-500">Package:</span>
+                <span className="w-16 text-warp-text-tertiary">Package:</span>
                 <span className="text-green-600">✓ Warp executes</span>
               </div>
               <div className="flex items-center">
-                <span className="w-16 text-gray-500">Deploy:</span>
+                <span className="w-16 text-warp-text-tertiary">Deploy:</span>
                 <span className="text-green-600">✓ Warp executes</span>
               </div>
               <div className="flex items-center">
-                <span className="w-16 text-gray-500">Monitor:</span>
+                <span className="w-16 text-warp-text-tertiary">Monitor:</span>
                 <span className="text-green-600">✓ Warp executes</span>
               </div>
             </div>
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Competitive Limitation</h3>
+            <h3 className="font-semibold text-warp-text-primary mb-3">Competitive Limitation</h3>
             <div className="bg-red-50 p-4 rounded-lg">
               <p className="text-sm text-red-700 mb-2">
                 <strong>Cursor and Claude can only help with step 1</strong> - writing the code. 
@@ -239,9 +239,9 @@ export default function TechnicalDifferentiators() {
           </div>
         </div>
 
-        <div className="mt-6 p-4 bg-warp-blue rounded-lg text-white">
-          <h3 className="font-bold mb-2">Sales Positioning</h3>
-          <p className="text-sm">
+        <div className="mt-6 p-4 bg-warp-accent bg-opacity-10 border-2 border-warp-accent rounded-lg">
+          <h3 className="font-bold mb-2 text-warp-accent">Sales Positioning</h3>
+          <p className="text-sm text-warp-text-primary">
             "We're not competing on who writes code faster - we're competing on who ships software faster. 
             And that requires execution capability that our competitors simply don't have."
           </p>

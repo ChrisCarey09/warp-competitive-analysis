@@ -36,7 +36,7 @@ export default function Navigation() {
                   href={item.href}
                   className={`px-3 py-2 rounded-lg text-sm font-medium flex items-center space-x-2 transition-all duration-200 ${
                     isActive
-                      ? 'bg-warp-accent text-white'
+                      ? 'bg-warp-accent text-warp-bg-primary'
                       : 'text-warp-text-secondary hover:text-warp-text-primary hover:bg-warp-bg-secondary'
                   }`}
                 >

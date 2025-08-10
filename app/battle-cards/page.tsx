@@ -84,18 +84,18 @@ export default function BattleCards() {
   return (
     <div className="max-w-6xl mx-auto">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Battle Cards</h1>
-        <p className="text-lg text-gray-600">
+        <h1 className="text-3xl font-bold text-warp-text-primary mb-4">Battle Cards</h1>
+        <p className="text-lg text-warp-text-secondary">
           Ready-to-use responses for common objections and competitive scenarios
         </p>
       </div>
 
-      <div className="bg-gradient-to-r from-red-500 to-orange-500 rounded-lg p-6 text-white mb-8">
+      <div className="bg-red-100 border-2 border-red-300 rounded-lg p-6 mb-8">
         <div className="flex items-center mb-2">
           <Shield className="h-6 w-6 mr-2" />
-          <h2 className="text-xl font-bold">Battle Card Strategy</h2>
+          <h2 className="text-xl font-bold text-red-700">Battle Card Strategy</h2>
         </div>
-        <p className="text-sm">
+        <p className="text-sm text-red-600">
           Remember: Don't just overcome objections - use them as opportunities to reinforce 
           your key differentiator (execution capability) and demonstrate value.
         </p>
@@ -103,10 +103,10 @@ export default function BattleCards() {
 
       <div className="space-y-6 mb-8">
         {battleCards.map((card, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-            <div className="bg-gray-50 px-6 py-4 border-b border-gray-200">
+          <div key={index} className="bg-warp-bg-primary rounded-lg shadow-md border border-warp-border overflow-hidden">
+            <div className="bg-warp-bg-secondary px-6 py-4 border-b border-warp-border">
               <div className="flex items-center justify-between">
-                <h3 className="text-lg font-bold text-gray-900">
+                <h3 className="text-lg font-bold text-warp-text-primary">
                   "{card.objection}"
                 </h3>
                 <span className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -128,23 +128,23 @@ export default function BattleCards() {
                 <div>
                   <div className="flex items-center mb-3">
                     <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
-                    <h4 className="font-semibold text-gray-900">Response</h4>
+                    <h4 className="font-semibold text-warp-text-primary">Response</h4>
                   </div>
-                  <p className="text-gray-600 text-sm mb-4">{card.response}</p>
+                  <p className="text-warp-text-secondary text-sm mb-4">{card.response}</p>
                   
                   <div className="flex items-center mb-2">
-                    <ArrowRight className="h-4 w-4 text-warp-blue mr-2" />
-                    <h5 className="font-semibold text-gray-900 text-sm">Recommended Demo</h5>
+                    <ArrowRight className="h-4 w-4 text-warp-accent mr-2" />
+                    <h5 className="font-semibold text-warp-text-primary text-sm">Recommended Demo</h5>
                   </div>
-                  <p className="text-gray-600 text-xs">{card.demo}</p>
+                  <p className="text-warp-text-secondary text-xs">{card.demo}</p>
                 </div>
                 
                 <div className="bg-blue-50 rounded-lg p-4">
                   <div className="flex items-center mb-2">
-                    <AlertTriangle className="h-4 w-4 text-warp-blue mr-2" />
-                    <h5 className="font-semibold text-warp-blue text-sm">Desired Outcome</h5>
+                    <AlertTriangle className="h-4 w-4 text-warp-accent mr-2" />
+                    <h5 className="font-semibold text-warp-accent text-sm">Desired Outcome</h5>
                   </div>
-                  <p className="text-warp-blue text-xs">{card.outcome}</p>
+                  <p className="text-warp-accent text-xs">{card.outcome}</p>
                 </div>
               </div>
             </div>
@@ -152,19 +152,19 @@ export default function BattleCards() {
         ))}
       </div>
 
-      <div className="bg-white rounded-lg shadow-md border border-gray-200 mb-8">
-        <div className="bg-gray-50 px-6 py-4 border-b border-gray-200">
-          <h2 className="text-xl font-bold text-gray-900">Competitive Scenario Playbook</h2>
+      <div className="bg-warp-bg-primary rounded-lg shadow-md border border-warp-border mb-8">
+        <div className="bg-warp-bg-secondary px-6 py-4 border-b border-warp-border">
+          <h2 className="text-xl font-bold text-warp-text-primary">Competitive Scenario Playbook</h2>
         </div>
         
         <div className="p-6">
           <div className="space-y-6">
             {competitiveScenarios.map((scenario, index) => (
-              <div key={index} className="border-l-4 border-warp-blue pl-6">
-                <h3 className="font-bold text-gray-900 mb-2">{scenario.scenario}</h3>
+              <div key={index} className="border-l-4 border-warp-accent pl-6">
+                <h3 className="font-bold text-warp-text-primary mb-2">{scenario.scenario}</h3>
                 <div className="bg-blue-50 p-4 rounded-lg mb-3">
-                  <h4 className="font-semibold text-warp-blue text-sm mb-1">Approach: {scenario.approach}</h4>
-                  <p className="text-gray-700 text-sm italic">"{scenario.response}"</p>
+                  <h4 className="font-semibold text-warp-accent text-sm mb-1">Approach: {scenario.approach}</h4>
+                  <p className="text-warp-text-secondary text-sm italic">"{scenario.response}"</p>
                 </div>
                 <div className="bg-green-50 p-3 rounded">
                   <h5 className="font-semibold text-green-700 text-sm mb-1">Follow-up:</h5>
@@ -177,36 +177,36 @@ export default function BattleCards() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-          <h3 className="text-lg font-bold text-gray-900 mb-4">Quick Wins</h3>
+        <div className="bg-warp-bg-primary rounded-lg p-6 shadow-md border border-warp-border">
+          <h3 className="text-lg font-bold text-warp-text-primary mb-4">Quick Wins</h3>
           <div className="space-y-3">
             <div className="flex items-start">
               <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 mr-2 flex-shrink-0" />
               <div>
-                <p className="text-sm font-medium text-gray-900">Time to Value Demo</p>
-                <p className="text-xs text-gray-600">Show immediate productivity gain with common task automation</p>
+                <p className="text-sm font-medium text-warp-text-primary">Time to Value Demo</p>
+                <p className="text-xs text-warp-text-secondary">Show immediate productivity gain with common task automation</p>
               </div>
             </div>
             <div className="flex items-start">
               <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 mr-2 flex-shrink-0" />
               <div>
-                <p className="text-sm font-medium text-gray-900">ROI Calculator</p>
-                <p className="text-xs text-gray-600">Convert time savings to dollar impact for their team size</p>
+                <p className="text-sm font-medium text-warp-text-primary">ROI Calculator</p>
+                <p className="text-xs text-warp-text-secondary">Convert time savings to dollar impact for their team size</p>
               </div>
             </div>
             <div className="flex items-start">
               <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 mr-2 flex-shrink-0" />
               <div>
-                <p className="text-sm font-medium text-gray-900">Pilot Program</p>
-                <p className="text-xs text-gray-600">30-day trial with their most DevOps-heavy team</p>
+                <p className="text-sm font-medium text-warp-text-primary">Pilot Program</p>
+                <p className="text-xs text-warp-text-secondary">30-day trial with their most DevOps-heavy team</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-warp-blue to-warp-purple rounded-lg p-6 text-white">
-          <h3 className="text-lg font-bold mb-4">Remember</h3>
-          <div className="space-y-3 text-sm">
+        <div className="bg-warp-accent bg-opacity-10 border-2 border-warp-accent rounded-lg p-6">
+          <h3 className="text-lg font-bold mb-4 text-warp-accent">Remember</h3>
+          <div className="space-y-3 text-sm text-warp-text-primary">
             <p>• Always lead with <strong>execution capability</strong> as the key differentiator</p>
             <p>• Use their current tools as <strong>context</strong>, not competition</p>
             <p>• Focus on <strong>outcomes</strong> (faster shipping) not features</p>

@@ -60,8 +60,8 @@ export default function ElevatorPitches() {
   return (
     <div className="max-w-6xl mx-auto">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Elevator Pitches</h1>
-        <p className="text-lg text-gray-600">
+        <h1 className="text-3xl font-bold text-warp-text-primary mb-4">Elevator Pitches</h1>
+        <p className="text-lg text-warp-text-secondary">
           Ready-to-use pitches for different competitive scenarios and positioning strategies
         </p>
       </div>
@@ -70,14 +70,14 @@ export default function ElevatorPitches() {
         {pitches.map((pitch, index) => {
           const Icon = pitch.icon
           return (
-            <div key={index} className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+            <div key={index} className="bg-warp-bg-primary rounded-lg p-6 shadow-md border border-warp-border">
               <div className="flex items-center mb-4">
                 <div className={`p-2 rounded-lg ${pitch.bgColor}`}>
                   <Icon className={`h-6 w-6 ${pitch.color}`} />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 ml-3">{pitch.title}</h3>
+                <h3 className="text-lg font-bold text-warp-text-primary ml-3">{pitch.title}</h3>
               </div>
-              <div className="prose prose-sm text-gray-600">
+              <div className="prose prose-sm text-warp-text-secondary">
                 {pitch.content.split('\n\n').map((paragraph, pIndex) => (
                   <p key={pIndex} className="mb-3 last:mb-0">{paragraph}</p>
                 ))}
@@ -87,46 +87,46 @@ export default function ElevatorPitches() {
         })}
       </div>
 
-      <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-          <Clock className="h-6 w-6 text-warp-blue mr-2" />
+      <div className="bg-warp-bg-primary rounded-lg p-6 shadow-md border border-warp-border mb-8">
+        <h2 className="text-xl font-bold text-warp-text-primary mb-4 flex items-center">
+          <Clock className="h-6 w-6 text-warp-accent mr-2" />
           Hook Questions
         </h2>
-        <p className="text-gray-600 mb-4">Use these questions to grab attention and create urgency:</p>
+        <p className="text-warp-text-secondary mb-4">Use these questions to grab attention and create urgency:</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {hooks.map((hook, index) => (
-            <div key={index} className="bg-gray-50 p-4 rounded-lg">
-              <p className="text-sm text-gray-700 italic">"{hook}"</p>
+            <div key={index} className="bg-warp-bg-secondary p-4 rounded-lg">
+              <p className="text-sm text-warp-text-secondary italic">"{hook}"</p>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Competitive Positioning Messages</h2>
+      <div className="bg-warp-bg-primary rounded-lg p-6 shadow-md border border-warp-border mb-8">
+        <h2 className="text-xl font-bold text-warp-text-primary mb-4">Competitive Positioning Messages</h2>
         <div className="space-y-6">
           {positioning.map((pos, index) => (
-            <div key={index} className="border-l-4 border-warp-blue pl-4">
-              <h3 className="font-bold text-gray-900">{pos.title}</h3>
-              <p className="text-warp-blue font-medium text-sm mb-2">"{pos.message}"</p>
-              <p className="text-gray-600 text-sm">{pos.detail}</p>
+            <div key={index} className="border-l-4 border-warp-accent pl-4">
+              <h3 className="font-bold text-warp-text-primary">{pos.title}</h3>
+              <p className="text-warp-accent font-medium text-sm mb-2">"{pos.message}"</p>
+              <p className="text-warp-text-secondary text-sm">{pos.detail}</p>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="bg-gradient-to-br from-warp-blue to-warp-purple rounded-lg p-6 text-white">
-        <h2 className="text-xl font-bold mb-4">The Killer Close</h2>
-        <div className="bg-white/10 rounded-lg p-4">
-          <p className="text-sm italic">
+      <div className="bg-warp-accent bg-opacity-10 border-2 border-warp-accent rounded-lg p-6">
+        <h2 className="text-xl font-bold mb-4 text-warp-accent">The Killer Close</h2>
+        <div className="bg-warp-accent bg-opacity-20 rounded-lg p-4">
+          <p className="text-sm italic text-warp-text-primary">
             "Look, every other AI tool stops at the suggestion. We're the first AI that follows through. 
             In six months, do you want your team to be faster at getting AI advice, or do you want them 
             to be faster at shipping software? Because those are very different outcomes."
           </p>
         </div>
         <div className="mt-4">
-          <h3 className="font-bold mb-2">ROI Framework</h3>
-          <p className="text-sm">
+          <h3 className="font-bold mb-2 text-warp-text-primary">ROI Framework</h3>
+          <p className="text-sm text-warp-text-secondary">
             "Let's do the math. Cursor costs $20/month per developer. Claude Pro is $20/month. 
             That's $480/year per developer for tools that still require manual execution. 
             Warp replaces both and actually completes the work. The ROI isn't just cost savings - 
