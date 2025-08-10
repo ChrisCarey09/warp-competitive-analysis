@@ -18,12 +18,12 @@ export default function Navigation() {
   const pathname = usePathname()
 
   return (
-    <nav className="bg-warp-black border-b border-warp-bg-tertiary backdrop-blur-md">
+    <nav className="bg-warp-cream border-b border-warp-border backdrop-blur-md">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
-            <WarpLogo className="h-6 w-auto text-warp-off-white" />
-            <div className="h-6 w-px bg-warp-bg-tertiary" />
+            <WarpLogo className="h-6 w-auto text-warp-black" />
+            <div className="h-6 w-px bg-warp-border" />
             <span className="text-lg font-medium text-warp-text-primary">Sales Intelligence</span>
           </div>
           <div className="hidden md:flex space-x-1">
@@ -36,8 +36,8 @@ export default function Navigation() {
                   href={item.href}
                   className={`px-3 py-2 rounded-lg text-sm font-medium flex items-center space-x-2 transition-all duration-200 ${
                     isActive
-                      ? 'bg-warp-off-white text-warp-black'
-                      : 'text-warp-text-secondary hover:text-warp-text-primary hover:bg-warp-bg-tertiary'
+                      ? 'bg-warp-accent text-white'
+                      : 'text-warp-text-secondary hover:text-warp-text-primary hover:bg-warp-bg-secondary'
                   }`}
                 >
                   <Icon className="h-4 w-4" />

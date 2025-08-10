@@ -14,8 +14,8 @@ html {
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background: #000000;
-  color: rgba(250, 249, 246, 0.9);
+  background: #faf9f6;
+  color: #121212;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
   margin: 0;

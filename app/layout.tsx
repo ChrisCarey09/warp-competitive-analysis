@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="min-h-screen bg-warp-black">
+        <div className="min-h-screen bg-warp-cream">
           <Navigation />
           <main className="container mx-auto px-4 py-8 max-w-6xl">
             {children}
