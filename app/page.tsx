@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { ArrowRight, Target, MessageSquare, Zap, Shield, Building, TrendingUp } from 'lucide-react'
 
+// Updated with Warp branding
 export default function Home() {
   return (
     <div className="max-w-6xl mx-auto">
