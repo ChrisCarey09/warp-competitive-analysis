@@ -15,26 +15,42 @@ export default function AuthWrapper({ children }: AuthWrapperProps) {
   const router = useRouter()
 
   // Public routes that don't require authentication
-  const publicRoutes = ['/auth/signin', '/auth/error']
+  const publicRoutes = ['/auth/signin', '/auth/error', '/debug']
   const isPublicRoute = publicRoutes.includes(pathname)
 
+  // Debug logging
+  console.log('AuthWrapper Debug:', {
+    status,
+    hasSession: !!session,
+    pathname,
+    isPublicRoute,
+    sessionEmail: session?.user?.email
+  })
+
   useEffect(() => {
-    if (status === 'loading') return // Still loading
+    console.log('AuthWrapper useEffect:', { status, hasSession: !!session, isPublicRoute, pathname })
+    
+    if (status === 'loading') {
+      console.log('Still loading session...')
+      return // Still loading
+    }
 
     if (!session && !isPublicRoute) {
+      console.log('No session, redirecting to signin')
       // Redirect to sign-in if not authenticated and trying to access protected route
       router.push('/auth/signin')
     } else if (session && isPublicRoute) {
+      console.log('Has session, redirecting away from auth pages')
       // Redirect to home if authenticated and trying to access auth pages
       router.push('/')
     }
-  }, [session, status, isPublicRoute, router])
+  }, [session, status, isPublicRoute, router, pathname])
 
   // Show loading screen while checking authentication
   if (status === 'loading') {
     return (
       <div className="min-h-screen bg-warp-cream flex items-center justify-center">
-        <div className="text-warp-gray">Loading...</div>
+        <div className="text-warp-gray">Loading session...</div>
       </div>
     )
   }
@@ -44,7 +60,7 @@ export default function AuthWrapper({ children }: AuthWrapperProps) {
     return <>{children}</>
   }
 
-  // Show protected content with navigation
+  // Show protected content with navigation if authenticated
   if (session) {
     return (
       <div className="min-h-screen bg-warp-cream">
@@ -56,10 +72,10 @@ export default function AuthWrapper({ children }: AuthWrapperProps) {
     )
   }
 
-  // Show loading while redirecting
+  // No session and not a public route - should redirect but show loading
   return (
     <div className="min-h-screen bg-warp-cream flex items-center justify-center">
-      <div className="text-warp-gray">Redirecting...</div>
+      <div className="text-warp-gray">Redirecting to sign in...</div>
     </div>
   )
 }
