@@ -1,7 +1,7 @@
 import { NextAuthOptions } from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
 
-const ALLOWED_EMAILS = ["chriscarey09@gmail.com"]
+const ALLOWED_EMAILS = ["chriscarey09@gmail.com", "alexismcrandall@gmail.com"]
 const ALLOWED_DOMAINS = ["warp.dev"]
 
 export const authOptions: NextAuthOptions = {
