@@ -3,6 +3,7 @@ import AuthSessionProvider from '../components/SessionProvider'
 import { getServerSession } from 'next-auth'
 import { authOptions } from '../lib/auth'
 import AuthWrapper from '../components/AuthWrapper'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata = {
   title: 'Warp Competitive Analysis',
@@ -24,6 +25,7 @@ export default async function RootLayout({
             {children}
           </AuthWrapper>
         </AuthSessionProvider>
+        <Analytics />
       </body>
     </html>
   )
